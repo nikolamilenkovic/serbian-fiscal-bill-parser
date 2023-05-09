@@ -2,6 +2,8 @@
   "name": "serbian-fiscal-bill-parser",
   "version": "1.0.0",
   "description": "Library for parsing official fiscal bills issued in Serbia",
+  "author": "Nikola Milenkovic",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": {
@@ -39,15 +41,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snyk-labs/modern-npm-package.git"
+    "url": "git@github.com:nikolamilenkovic/serbian-fiscal-bill-parser.git"
   },
   "keywords": [
     "typescript",
     "nodejs",
     "parser"
   ],
-  "author": "Nikola Milenkovic",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nikolamilenkovic/serbian-fiscal-bill-parser/issues"
   },
