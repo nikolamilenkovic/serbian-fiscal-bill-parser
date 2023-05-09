@@ -1,0 +1,32 @@
+{
+    "company": {
+      "pib": "110976122",
+      "name": "WOLT",
+      "city": "Београд",
+      "address": "БУЛЕВАР ВОЈВОДЕ БОЈОВИЋА 8",
+      "municipality": "Стари Град"
+    },
+    "pos": {
+      "id": "1207084",
+      "name": "WOLT"
+    },
+    "items": [
+      {
+        "name": "Достава",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 144,
+        "amount": 1,
+        "unitPrice": 144
+      },
+      {
+        "name": "Напојница",
+        "measurementUnit": "kom",
+        "vatType": 0,
+        "price": 50,
+        "amount": 1,
+        "unitPrice": 50
+      }
+    ],
+    "price": 194
+  }

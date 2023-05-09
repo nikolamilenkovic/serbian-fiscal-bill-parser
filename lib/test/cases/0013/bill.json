@@ -1,0 +1,64 @@
+{
+    "company": {
+      "pib": "103482850",
+      "name": "DELHAIZE SERBIA",
+      "city": "Београд",
+      "address": "ЏОНА КЕНЕДИЈА 10А",
+      "municipality": "Нови Београд"
+    },
+    "pos": {
+      "id": "1000539",
+      "name": "103-Maxi"
+    },
+    "items": [
+      {
+        "name": "Chipsy Domacinski slani 230g",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 249.99,
+        "amount": 1,
+        "unitPrice": 249.99
+      },
+      {
+        "name": "Ml.ster.2.8%mm Moja Kr.1.5L TB",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 229.99,
+        "amount": 1,
+        "unitPrice": 229.99
+      },
+      {
+        "name": "Sok naran.Premium Fruv.1,5L",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 385.99,
+        "amount": 1,
+        "unitPrice": 385.99
+      },
+      {
+        "name": "Cokol.Najl.zelje ml.m.5g 150g",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 549.98,
+        "amount": 2,
+        "unitPrice": 274.99
+      },
+      {
+        "name": "Bomb.euk.Fisherman s friend25g",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 154.99,
+        "amount": 1,
+        "unitPrice": 154.99
+      },
+      {
+        "name": "Cokolada Kinder 150g",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 244.99,
+        "amount": 1,
+        "unitPrice": 244.99
+      }
+    ],
+    "price": 1815.93
+  }

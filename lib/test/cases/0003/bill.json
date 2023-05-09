@@ -1,0 +1,24 @@
+{
+  "company": {
+      "pib": "102778428",
+      "name": "GIGATRON DOO BEOGRAD",
+      "city": "Београд",
+      "address": "БУЛЕВАР АРСЕНИЈА ЧАРНОЈЕВИЋА 69А",
+      "municipality": "Нови Београд"
+    },
+    "pos": {
+      "id": "1101545",
+      "name": "Gigatron prodavnica G54"
+    },
+    "items": [
+      {
+        "name": "Samsung K.punj.TipCnaTipC Beli",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 1599,
+        "amount": 1,
+        "unitPrice": 1599
+      }
+    ],
+    "price": 1599
+  }

@@ -1,0 +1,56 @@
+{
+    "company": {
+      "pib": "101729431",
+      "name": "TRGOCENTAR",
+      "city": "Београд",
+      "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 123",
+      "municipality": "Земун"
+    },
+    "pos": {
+      "id": "1063399",
+      "name": "SKROZ DOBRA PEKARA 123 Mihajla Pupina"
+    },
+    "items": [
+      {
+        "name": "HLEB RAZANI",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 120,
+        "amount": 1,
+        "unitPrice": 120
+      },
+      {
+        "name": "SARAJEVSKA PITA PECURKA",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 170,
+        "amount": 1,
+        "unitPrice": 170
+      },
+      {
+        "name": "JOGURT 0,25",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 60,
+        "amount": 1,
+        "unitPrice": 60
+      },
+      {
+        "name": "PITA HELJDINA PAPRIKA SPANAC",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 120,
+        "amount": 1,
+        "unitPrice": 120
+      },
+      {
+        "name": "ZU ZU",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 169.06,
+        "amount": 0.214,
+        "unitPrice": 790
+      }
+    ],
+    "price": 639.06
+  }

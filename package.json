@@ -1,0 +1,101 @@
+{
+  "name": "serbian-fiscal-bill-parser",
+  "version": "1.0.0",
+  "description": "Library for parsing official fiscal bills issued in Serbia",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:debug": "node --inspect-brk -r ts-node/register node_modules/jest/bin/jest.js --runInBand",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snyk-labs/modern-npm-package.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "parser"
+  ],
+  "author": "Nikola Milenkovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolamilenkovic/serbian-fiscal-bill-parser/issues"
+  },
+  "homepage": "https://github.com/nikolamilenkovic/serbian-fiscal-bill-parser#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "semantic-release": "^19.0.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "./lib",
+    "testRegex": "\\.*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": [
+        "ts-jest",
+        {
+          "tsconfig": "./configs/tsconfig.esm.json",
+          "useESM": true
+        }
+      ]
+    },
+    "collectCoverageFrom": [
+      "src/**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": ".",
+    "outputName": "test-report/junit.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  }
+}

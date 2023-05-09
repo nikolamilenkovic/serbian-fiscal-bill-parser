@@ -1,0 +1,152 @@
+{
+    "company": {
+      "pib": "106884584",
+      "name": "LIDL SRBIJA",
+      "city": "Београд",
+      "address": "БАЛКАНСКА 123/4",
+      "municipality": "Земун"
+    },
+    "pos": {
+      "id": "1056850",
+      "name": "Prodavnica br. 123"
+    },
+    "items": [
+      {
+        "name": "Pileći batak",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 438.23,
+        "amount": 0.996,
+        "unitPrice": 439.99
+      },
+      {
+        "name": "Pileći batak",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 414.03,
+        "amount": 0.941,
+        "unitPrice": 439.99
+      },
+      {
+        "name": "Smrznuti mix za đuve",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 99.99,
+        "amount": 1,
+        "unitPrice": 99.99
+      },
+      {
+        "name": "Smrznuti mix za đuve",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 99.99,
+        "amount": 1,
+        "unitPrice": 99.99
+      },
+      {
+        "name": "Pahuljice med i kiki",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 179.99,
+        "amount": 1,
+        "unitPrice": 179.99
+      },
+      {
+        "name": "Pahuljice med i kiki",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 179.99,
+        "amount": 1,
+        "unitPrice": 179.99
+      },
+      {
+        "name": "Svinjski gulaš od pl",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 674.99,
+        "amount": 1,
+        "unitPrice": 674.99
+      },
+      {
+        "name": "Mešano mleveno meso",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 799.99,
+        "amount": 1,
+        "unitPrice": 799.99
+      },
+      {
+        "name": "Čoko školjke",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 169.99,
+        "amount": 1,
+        "unitPrice": 169.99
+      },
+      {
+        "name": "Čoko školjke",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 169.99,
+        "amount": 1,
+        "unitPrice": 169.99
+      },
+      {
+        "name": "Pileća viršla",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 219.99,
+        "amount": 1,
+        "unitPrice": 219.99
+      },
+      {
+        "name": "Blitva, veza",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 99.98,
+        "amount": 2,
+        "unitPrice": 49.99
+      },
+      {
+        "name": "Paradajz grap.",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 309.91,
+        "amount": 1.192,
+        "unitPrice": 259.99
+      },
+      {
+        "name": "Rotkvica, veza",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 119.97,
+        "amount": 3,
+        "unitPrice": 39.99
+      },
+      {
+        "name": "Ananas, rinfuz",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 202.78,
+        "amount": 1.56,
+        "unitPrice": 129.99
+      },
+      {
+        "name": "Krastavac komad",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 59.99,
+        "amount": 1,
+        "unitPrice": 59.99
+      },
+      {
+        "name": "Banane, rinfuz",
+        "measurementUnit": "kg",
+        "vatType": 0.1,
+        "price": 216.79,
+        "amount": 1.084,
+        "unitPrice": 199.99
+      }
+    ],
+    "price": 4456.59
+  }

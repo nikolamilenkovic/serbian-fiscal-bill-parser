@@ -1,0 +1,40 @@
+{
+    "company": {
+      "pib": "108942206",
+      "name": "LC WAIKIKI RETAIL RS",
+      "city": "Београд",
+      "address": "БУЛЕВАР УМЕТНОСТИ 4",
+      "municipality": "Нови Београд"
+    },
+    "pos": {
+      "id": "1007575",
+      "name": "RS01 Beograd Merkator"
+    },
+    "items": [
+      {
+        "name": "BODI ŽERSEJ - MAJICA",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 899,
+        "amount": 1,
+        "unitPrice": 899
+      },
+      {
+        "name": "BODI ŽERSEJ - MAJICA",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 599,
+        "amount": 1,
+        "unitPrice": 599
+      },
+      {
+        "name": "ASESOAR OSTALO",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 7,
+        "amount": 1,
+        "unitPrice": 7
+      }
+    ],
+    "price": 1505
+  }

@@ -1,0 +1,64 @@
+{
+    "company": {
+        "pib": "100274692",
+        "name": "ARS PROIZVODNO TRGOVINSKO DRUŠTVO SA OGRANIČENOM ODGOVORNOŠĆU SOMBOR",
+        "city": "Београд",
+        "address": "БУЛЕВАР УМЕТНОСТИ 4",
+        "municipality": "Нови Београд"
+      },
+      "pos": {
+        "id": "1002492",
+        "name": "Maloprodaja 3"
+      },
+      "items": [
+        {
+          "name": "MAPED SESTAR TEHNIC 308 178001",
+          "measurementUnit": "kom",
+          "vatType": 0.1,
+          "price": 875,
+          "amount": 1,
+          "unitPrice": 875
+        },
+        {
+          "name": "UNI MARKER PIN-200 OD 003 DO 1.2",
+          "measurementUnit": "kom",
+          "vatType": 0.2,
+          "price": 265,
+          "amount": 1,
+          "unitPrice": 265
+        },
+        {
+          "name": "FC GUMICA 187130 BELA DUST-FREE",
+          "measurementUnit": "kom",
+          "vatType": 0.2,
+          "price": 99,
+          "amount": 1,
+          "unitPrice": 99
+        },
+        {
+          "name": "GEOMETRIJSKI SET 569 22",
+          "measurementUnit": "kom",
+          "vatType": 0.1,
+          "price": 995,
+          "amount": 1,
+          "unitPrice": 995
+        },
+        {
+          "name": "TROUGAO 60/30 cm ARDA PLAVI 40230SS",
+          "measurementUnit": "kom",
+          "vatType": 0.1,
+          "price": 295,
+          "amount": 1,
+          "unitPrice": 295
+        },
+        {
+          "name": "ŠT.BK. ARS 400X500 BIORAZGRADIVO",
+          "measurementUnit": "kom",
+          "vatType": 0.2,
+          "price": 12,
+          "amount": 1,
+          "unitPrice": 12
+        }
+      ],
+      "price": 2541
+    }

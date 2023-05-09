@@ -1,0 +1,88 @@
+{
+    "company": {
+      "pib": "106884584",
+      "name": "LIDL SRBIJA",
+      "city": "Београд",
+      "address": "ТОШИН БУНАР 41",
+      "municipality": "Земун"
+    },
+    "pos": {
+      "id": "1056850",
+      "name": "Prodavnica br. 0124"
+    },
+    "items": [
+      {
+        "name": "Beli luk mladi",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 59.99,
+        "amount": 1,
+        "unitPrice": 59.99
+      },
+      {
+        "name": "Crni luk mladi",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 49.99,
+        "amount": 1,
+        "unitPrice": 49.99
+      },
+      {
+        "name": "Alkohol 70%",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 299.99,
+        "amount": 1,
+        "unitPrice": 299.99
+      },
+      {
+        "name": "Tortilja wraps",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 149.99,
+        "amount": 1,
+        "unitPrice": 149.99
+      },
+      {
+        "name": "Truleks krpa",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 178.99,
+        "amount": 1,
+        "unitPrice": 178.99
+      },
+      {
+        "name": "Bio Limun 500g",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 229.99,
+        "amount": 1,
+        "unitPrice": 229.99
+      },
+      {
+        "name": "Kukuruz sa pasuljem",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 159.99,
+        "amount": 1,
+        "unitPrice": 159.99
+      },
+      {
+        "name": "Bio kukuruz",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 199.99,
+        "amount": 1,
+        "unitPrice": 199.99
+      },
+      {
+        "name": "Sred. za čišćenje",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 279.99,
+        "amount": 1,
+        "unitPrice": 279.99
+      }
+    ],
+    "price": 1608.91
+  }

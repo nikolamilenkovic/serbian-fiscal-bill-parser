@@ -1,0 +1,24 @@
+{
+    "company": {
+      "pib": "106884584",
+      "name": "LIDL SRBIJA",
+      "city": "Београд",
+      "address": "ТОШИН БУНАР 41",
+      "municipality": "Земун"
+    },
+    "pos": {
+      "id": "1056850",
+      "name": "Prodavnica br. 0124"
+    },
+    "items": [
+      {
+        "name": "Poga. sa čvarc.",
+        "measurementUnit": "kom",
+        "vatType": 0.1,
+        "price": 119.98,
+        "amount": 2,
+        "unitPrice": 59.99
+      }
+    ],
+    "price": 119.98
+  }
