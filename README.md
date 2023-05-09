@@ -9,7 +9,7 @@ Please note, this library is not a crawler. It is up to you to write code which 
 1. Create a new NodeJS script `app.mjs`
 1. Run `npm install --save serbian-fiscal-bill-parser` in your terminal
 1. Paste the following code
-```
+```JavaScript
 import { SerbianFiscalBillParser } from 'serbian-fiscal-bill-parser'
 
 let bill = 
