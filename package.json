@@ -1,6 +1,6 @@
 {
   "name": "serbian-fiscal-bill-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for parsing official fiscal bills issued in Serbia",
   "author": "Nikola Milenkovic",
   "license": "MIT",
@@ -73,7 +73,7 @@
       "^.+\\.(t|j)s$": [
         "ts-jest",
         {
-          "tsconfig": "./configs/tsconfig.esm.json",
+          "tsconfig": "./tsconfig.json",
           "useESM": true
         }
       ]

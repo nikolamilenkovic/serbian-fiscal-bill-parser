@@ -5,7 +5,7 @@ import { SerbianFiscalBillParser } from '../src';
 
 describe(SerbianFiscalBillParser.name + ' E2E tests', () => {
     const testCaseDirs = readdirSync(resolve(__dirname, 'cases'), { withFileTypes: true })
-        //.filter(d => d.isDirectory() && d.name === '0013') //
+        //.filter(d => d.isDirectory() && d.name === '0014') //
         .map(d => resolve(__dirname, 'cases', d.name));
     
     each(testCaseDirs).test('%s', caseDir => {
@@ -18,7 +18,7 @@ describe(SerbianFiscalBillParser.name + ' E2E tests', () => {
         const result = parser.parse(rawBill);
         const resultJson = JSON.stringify(result, null, 2);
 
-        //console.log(resultJson);
+        // console.log(resultJson);
 
         // Assert
         expect(resultJson).toBe(JSON.stringify(expected, null, 2));

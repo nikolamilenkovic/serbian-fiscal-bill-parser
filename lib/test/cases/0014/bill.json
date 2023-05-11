@@ -1,0 +1,72 @@
+{
+    "company": {
+      "pib": "110734511",
+      "name": "OKOV INTERNATIONAL",
+      "city": "Београд",
+      "address": "ПАРТИЗАНСКЕ АВИЈАЦИЈЕ 2",
+      "municipality": "Нови Београд"
+    },
+    "pos": {
+      "id": "1080292",
+      "name": "Okov centar Bežanijska kosa"
+    },
+    "items": [
+      {
+        "name": "Garn. tanjira Polis Circles 18/1 bela Tognana gar",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 4298.76,
+        "amount": 1,
+        "unitPrice": 4298.76
+      },
+      {
+        "name": "Ceger višenamenski 45x40x20cm sort A.I.&amp;E.",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 319,
+        "amount": 1,
+        "unitPrice": 319
+      },
+      {
+        "name": "Muvalica sort Windhager",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 140,
+        "amount": 1,
+        "unitPrice": 140
+      },
+      {
+        "name": "Izolir traka SPVC crna 20mx19mm Tesa",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 199,
+        "amount": 1,
+        "unitPrice": 199
+      },
+      {
+        "name": "Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 7,
+        "amount": 1,
+        "unitPrice": 7
+      },
+      {
+        "name": "Izolir traka SPVC bela 20mx19mm Tesa",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 199,
+        "amount": 1,
+        "unitPrice": 199
+      },
+      {
+        "name": "Tiganj za palačinke Natural taste 25cm boja bronze",
+        "measurementUnit": "kom",
+        "vatType": 0.2,
+        "price": 2599,
+        "amount": 1,
+        "unitPrice": 2599
+      }
+    ],
+    "price": 7761.76
+  }

@@ -80,9 +80,9 @@ export class SerbianFiscalBillParser {
                 } catch (err) {
                     /* Not a number */
                 }
-            } else {
-                flattenedLine += bodyLine;
             }
+
+            flattenedLine += bodyLine;
         }
 
         const result = lines.join('\n');
@@ -198,6 +198,10 @@ export class SerbianFiscalBillParser {
         const curlyBracketsMeasurement = /\{[ ]?\D{1,3}\d?[ ]?\}$/i;
         if (result.match(curlyBracketsMeasurement)) {
             result = result.replace(curlyBracketsMeasurement, '');
+        }
+        const spaceMeasurement = /[ ]+(kom|kg)[ ]*$/i;
+        if (result.match(spaceMeasurement)) {
+            result = result.replace(spaceMeasurement, '');
         }
 
         // If result ends with number (product id), remove it. Id:

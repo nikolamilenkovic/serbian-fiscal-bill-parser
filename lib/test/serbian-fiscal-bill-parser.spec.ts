@@ -222,7 +222,27 @@ describe(SerbianFiscalBillParser.name, () => {
             // Assert
             expect(lines.length).toBe(2);
         });
-    });
+
+        it('should flatten two items, second starts with serbian latin character', () => {
+            // Arrange
+            let body =
+                'Izolir traka SPVC crna 20mx19mm Tesa kom\n' + //
+                ' (Ђ)                                    \n' +
+                '       199,00          1          199,00\n' +
+                'Štampana kesa Okov BG 300 +(2x90)x550x0.\n' +
+                '051 LDPE B kom (Ђ)                      \n' +
+                '       7,00            1            7,00';
+
+            // Act
+            let result = flattenItems(body);
+            let lines = result.split('\n');
+
+            // Assert
+            expect(lines.length).toBe(2);
+            expect(lines[0]).toBe('Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ)                                           199,00          1          199,00')
+            expect(lines[1]).toBe('Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B kom (Ђ)                             7,00            1            7,00')
+        })
+    }); 
 
     describe('getMeasurementType', () => {
         const getMeasurementType = line => parser['getMeasurementType'](line);
@@ -392,7 +412,9 @@ describe(SerbianFiscalBillParser.name, () => {
             ['Mleko/л (Е) 100,00 1 100,00', 'Mleko'],
             ['Ulje komine masline/л (Ђ) 1000,99 1 1000,99', 'Ulje komine masline'],
             ['Baterije (9v)(kom) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
-            ['001234-Baterije (9v)(kom) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)']
+            ['001234-Baterije (9v)(kom) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
+            ['Ceger višenamenski 45x40x20cm sort A.I.&amp;E. kom (Ђ)  319,00  1  319,00', 'Ceger višenamenski 45x40x20cm sort A.I.&amp;E.'],
+            ['Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ) 199,00 1 199,00', 'Izolir traka SPVC crna 20mx19mm Tesa']
         ]).test('should return name without measurement type', (line, target) => {
             // Arrange
             // Act
