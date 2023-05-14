@@ -1,0 +1,24 @@
+{
+   "company": {
+     "pib": "112840329",
+     "name": "INTERELEKTRONIK SHOP",
+     "city": "Београд",
+     "address": "ЧЕТВРТОГ ЈУЛА 1 ПРИЛАЗ",
+     "municipality": "Гроцка"
+   },
+   "pos": {
+     "id": "1162966",
+     "name": "Инелектроник"
+   },
+   "items": [
+     {
+       "name": "CL3000i-set 35WE Bosch inv",
+       "measurementUnit": "kom",
+       "vatType": 0.2,
+       "price": 59990,
+       "amount": 1,
+       "unitPrice": 59990
+     }
+   ],
+   "price": 59990
+ }

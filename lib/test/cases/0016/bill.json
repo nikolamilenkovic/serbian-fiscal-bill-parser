@@ -1,0 +1,32 @@
+{
+   "company": {
+     "pib": "100049486",
+     "name": "dm drogerie markt",
+     "city": "Београд",
+     "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 181",
+     "municipality": "Нови Београд"
+   },
+   "pos": {
+     "id": "1137845",
+     "name": "FILIJALA 012"
+   },
+   "items": [
+     {
+       "name": "DB pesak za macke 6l",
+       "measurementUnit": "kom",
+       "vatType": 0.2,
+       "price": 649,
+       "amount": 1,
+       "unitPrice": 649
+     },
+     {
+       "name": "BECUTAN BABY MARAMIC",
+       "measurementUnit": "kom",
+       "vatType": 0.2,
+       "price": 179,
+       "amount": 1,
+       "unitPrice": 179
+     }
+   ],
+   "price": 828
+ }
