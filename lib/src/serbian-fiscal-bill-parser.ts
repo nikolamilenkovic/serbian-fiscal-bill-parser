@@ -44,6 +44,11 @@ export class SerbianFiscalBillParser {
             }
         }
 
+        const date = this.getDate(bill);
+        if (date) {
+            result.date = date;
+        }
+
         return result;
     }
 
@@ -357,5 +362,35 @@ export class SerbianFiscalBillParser {
         }
 
         return result;
+    }
+
+    /**
+     * Gets date from the bill
+     * @param bill Raw bill text
+     * @returns Date of the bill
+     */
+    private getDate(bill: string): Date | null {
+        if (!bill) {
+            return null;
+        }
+
+        const dateString = bill.split('ПФР време:')[1].match(/[ .:0-9]+/);
+        if (dateString) {
+            const rawDate = dateString[0].trim();
+            const dateParts = rawDate.split('.');
+            const timeParts = rawDate.split(' ')[1].split(':');
+
+            const date = new Date(
+                Number.parseInt(dateParts[2]),
+                Number.parseInt(dateParts[1]) - 1,
+                Number.parseInt(dateParts[0]),
+                Number.parseInt(timeParts[0]),
+                Number.parseInt(timeParts[1]),
+                Number.parseInt(timeParts[2])
+            );
+            return new Date(date.getTime() - date.getTimezoneOffset() * 60 * 1000);
+        }
+
+        return null;
     }
 }

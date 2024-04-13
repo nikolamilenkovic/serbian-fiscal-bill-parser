@@ -516,4 +516,32 @@ describe(SerbianFiscalBillParser.name, () => {
             expect(result).toBe(1);
         });
     });
+
+    describe('getDate', () => {
+        const getDate = line => parser['getDate'](line);
+
+        each([
+            undefined, //
+            null,
+            ''
+        ]).test('should return null if input is %s', line => {
+            // Arrange
+            // Act
+            let result = getDate(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        it('should return date from line', () => {
+            // Arrange
+            let line = 'ПФР време:          06.05.2023. 10:55:09';
+
+            // Act
+            let result = getDate(line);
+
+            // Assert
+            expect(result).toEqual(new Date('2023-05-06T10:55:09.000Z'));
+        });
+    });
 });
