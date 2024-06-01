@@ -78,6 +78,19 @@ console.log(JSON.stringify(result, null, ' '));
 }
 ```
 
+## Changelog
+List of changes and improvements.
+
+### 1.0.4
+- Bug fix when parsing item ids.
+- Added this changelog.
+
+### 1.0.3
+- Added support for obtaining date/time from bills.
+
+### 1.0.0
+- Initial version.
+
 ## Contributing
 
 Feel free to create an issue if you notice any problems with the library. Add the link of the bill when creating an issue so that I can use it for testing. This is the link that is obtained by scanning the QR code on the bill.

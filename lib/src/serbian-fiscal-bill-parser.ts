@@ -182,7 +182,8 @@ export class SerbianFiscalBillParser {
         // - can start with character A9999
         // - can be separated from name with - (and spaces between)
         // - can be separated from name with , (and spaces between)
-        const idPrefixRegex = /^\D?\d+[ ]*[-,]*/;
+        // - cannot start with ( or [ or {, for example "(30 min) Massage" is not an item which starts with an id
+        const idPrefixRegex = /^[^0-9({\[]?\d+[ ]*[-,]*/;
         if (result.match(idPrefixRegex)) {
             result = result.replace(idPrefixRegex, '');
         }

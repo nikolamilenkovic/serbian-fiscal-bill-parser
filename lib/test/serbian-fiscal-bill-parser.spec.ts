@@ -423,6 +423,22 @@ describe(SerbianFiscalBillParser.name, () => {
             // Assert
             expect(result).toBe(target);
         });
+
+        each([
+            ['(30 min)Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '(30 min)Uklanjanje kamenca (odrasli)'], //
+            ['(30 min) Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '(30 min) Uklanjanje kamenca (odrasli)'], //
+            ['{30 min}Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min}Uklanjanje kamenca (odrasli)'],
+            ['{30 min} Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min} Uklanjanje kamenca (odrasli)'],
+            ['[30 min]Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min]Uklanjanje kamenca (odrasli)'],
+            ['[30 min] Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min] Uklanjanje kamenca (odrasli)'],
+        ]).test('should return name without cutting first bracketed text', (line, target) => {
+            // Arrange
+            // Act
+            let result = getName(line);
+
+            // Assert
+            expect(result).toBe(target);
+        });
     });
 
     describe('getItemPrice', () => {
