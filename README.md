@@ -81,6 +81,10 @@ console.log(JSON.stringify(result, null, ' '));
 ## Changelog
 List of changes and improvements.
 
+### 1.0.5
+- Support for parsing number (PFR broj računa)
+- Support for parsing counter (Brojač računa)
+
 ### 1.0.4
 - Bug fix when parsing item ids.
 - Added this changelog.

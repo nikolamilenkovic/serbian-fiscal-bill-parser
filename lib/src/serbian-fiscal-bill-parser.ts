@@ -49,6 +49,16 @@ export class SerbianFiscalBillParser {
             result.date = date;
         }
 
+        const number = this.getNumber(bill);
+        if (number) {
+            result.number = number;
+        }
+
+        const counter = this.getCounter(bill);
+        if (counter) {
+            result.counter = counter;
+        }
+
         return result;
     }
 
@@ -381,17 +391,56 @@ export class SerbianFiscalBillParser {
             const dateParts = rawDate.split('.');
             const timeParts = rawDate.split(' ')[1].split(':');
 
-            const date = new Date(
-                Number.parseInt(dateParts[2]),
-                Number.parseInt(dateParts[1]) - 1,
-                Number.parseInt(dateParts[0]),
-                Number.parseInt(timeParts[0]),
-                Number.parseInt(timeParts[1]),
-                Number.parseInt(timeParts[2])
-            );
+            const date = new Date(Number.parseInt(dateParts[2]), Number.parseInt(dateParts[1]) - 1, Number.parseInt(dateParts[0]), Number.parseInt(timeParts[0]), Number.parseInt(timeParts[1]), Number.parseInt(timeParts[2]));
             return new Date(date.getTime() - date.getTimezoneOffset() * 60 * 1000);
         }
 
         return null;
+    }
+
+    /**
+     * Gets bill number AKA 'PFR broj racuna'
+     * @param bill Raw bill text
+     * @returns Bill number AKA 'PFR broj racuna'
+     */
+    private getNumber(bill: string): string | null {
+        if (!bill) {
+            return null;
+        }
+
+        const numberStringRaw = bill.split('ПФР број рачуна:')[1];
+        if (!numberStringRaw) {
+            return null;
+        }
+
+        const numberString = numberStringRaw
+            .split('Бројач рачуна:')[0] //
+            .replace(/ /g, '')
+            .replace(/\r\n/g, '')
+            .replace(/\n/g, '');
+        return numberString.trim();
+    }
+
+    /**
+     * Gets counter number AKA 'Brojac racuna'
+     * @param bill Raw bill text
+     * @returns Counter number AKA 'Brojac racuna'
+     */
+    private getCounter(bill: string): string | null {
+        if (!bill) {
+            return null;
+        }
+
+        const counterStringRaw = bill.split('Бројач рачуна:')[1];
+        if (!counterStringRaw) {
+            return null;
+        }
+
+        const counterString = counterStringRaw
+            .split('=')[0]
+            .replace(/ /g, '')
+            .replace(/\r\n/g, '')
+            .replace(/\n/g, '');
+        return counterString.trim();
     }
 }

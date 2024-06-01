@@ -5,6 +5,8 @@ export class Bill {
     pos: Pos | null;
     price: number;
     date: Date;
+    number: string;
+    counter: string;
     city: string;
     items: Item[] | null;
 }

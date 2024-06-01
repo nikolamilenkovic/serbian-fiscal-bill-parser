@@ -1,6 +1,6 @@
 {
   "name": "serbian-fiscal-bill-parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Library for parsing official fiscal bills issued in Serbia",
   "author": "Nikola Milenkovic",
   "license": "MIT",

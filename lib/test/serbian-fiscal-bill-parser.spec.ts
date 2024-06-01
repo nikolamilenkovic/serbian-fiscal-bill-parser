@@ -172,7 +172,7 @@ describe(SerbianFiscalBillParser.name, () => {
             // Assert
             expect(result?.id).toBe('1000539');
             expect(result?.name).toBe('103-Maxi-NBG-Zemun');
-        })
+        });
     });
 
     describe('flattenItems', () => {
@@ -239,10 +239,10 @@ describe(SerbianFiscalBillParser.name, () => {
 
             // Assert
             expect(lines.length).toBe(2);
-            expect(lines[0]).toBe('Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ)                                           199,00          1          199,00')
-            expect(lines[1]).toBe('Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B kom (Ђ)                             7,00            1            7,00')
-        })
-    }); 
+            expect(lines[0]).toBe('Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ)                                           199,00          1          199,00');
+            expect(lines[1]).toBe('Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B kom (Ђ)                             7,00            1            7,00');
+        });
+    });
 
     describe('getMeasurementType', () => {
         const getMeasurementType = line => parser['getMeasurementType'](line);
@@ -366,7 +366,7 @@ describe(SerbianFiscalBillParser.name, () => {
             ['08462,VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
             ['08462, VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
             ['08435,Baterije (9v) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
-            ['08435,Igracke (ostalo) (Ђ) 1000,99 1 1000,99', 'Igracke (ostalo)'],
+            ['08435,Igracke (ostalo) (Ђ) 1000,99 1 1000,99', 'Igracke (ostalo)']
         ]).test('should return name without product id at the beginning', (line, target) => {
             // Arrange
             // Act
@@ -430,7 +430,7 @@ describe(SerbianFiscalBillParser.name, () => {
             ['{30 min}Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min}Uklanjanje kamenca (odrasli)'],
             ['{30 min} Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min} Uklanjanje kamenca (odrasli)'],
             ['[30 min]Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min]Uklanjanje kamenca (odrasli)'],
-            ['[30 min] Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min] Uklanjanje kamenca (odrasli)'],
+            ['[30 min] Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min] Uklanjanje kamenca (odrasli)']
         ]).test('should return name without cutting first bracketed text', (line, target) => {
             // Arrange
             // Act
@@ -558,6 +558,134 @@ describe(SerbianFiscalBillParser.name, () => {
 
             // Assert
             expect(result).toEqual(new Date('2023-05-06T10:55:09.000Z'));
+        });
+    });
+
+    describe('getNumber', () => {
+        const getNumber = line => parser['getNumber'](line);
+
+        each([
+            undefined, //
+            null,
+            ''
+        ]).test('should return null if input is %s', line => {
+            // Arrange
+            // Act
+            let result = getNumber(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        it('should return number from line', () => {
+            // Arrange
+            let line = 'ПФР број рачуна: 0000-0000000000000';
+
+            // Act
+            let result = getNumber(line);
+
+            // Assert
+            expect(result).toBe('0000-0000000000000');
+        });
+
+        it('should return number if it spans multiple lines', () => {
+            // Arrange
+            let segment = `
+                ========================================
+                ПФР време:          22.05.2024. 19:31:16
+                ПФР број рачуна: 00000000-00000000-00000
+                1111111111111111111111111111111111111111
+                2222222222222222222222222222222222222222
+                Бројач рачуна:           124721/127141ПП
+                ========================================`;
+
+            // Act
+            let result = getNumber(segment);
+
+            // Assert
+            expect(result).toBe('00000000-00000000-0000011111111111111111111111111111111111111112222222222222222222222222222222222222222');
+        });
+
+        it('should return number if it spans multiple lines with CRLF as new lines', () => {
+            // Arrange
+            let segment =
+                '========================================\r\n' + //
+                'ПФР време:          22.05.2024. 19:31:16\r\n' +
+                'ПФР број рачуна: 00000000-00000000-00000\r\n' +
+                '1111111111111111111111111111111111111111\r\n' +
+                '2222222222222222222222222222222222222222\r\n' +
+                'Бројач рачуна:           124721/127141ПП\r\n' +
+                '========================================';
+
+            // Act
+            let result = getNumber(segment);
+
+            // Assert
+            expect(result).toBe('00000000-00000000-0000011111111111111111111111111111111111111112222222222222222222222222222222222222222');
+        });
+    });
+
+    describe('getCounter', () => {
+        const getCounter = line => parser['getCounter'](line);
+
+        each([
+            undefined, //
+            null,
+            ''
+        ]).test('should return null if input is %s', line => {
+            // Arrange
+            // Act
+            let result = getCounter(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        it('should return counter from line', () => {
+            // Arrange
+            let line = 'Бројач рачуна:           124721/127141ПП';
+
+            // Act
+            let result = getCounter(line);
+
+            // Assert
+            expect(result).toBe('124721/127141ПП');
+        });
+
+        it('should return counter if it spans multiple lines', () => {
+            // Arrange
+            let segment = `
+                ========================================
+                ПФР време:          22.05.2024. 19:31:16
+                ПФР број рачуна: 00000000-00000000-00000
+                Бројач рачуна: 1111111111111111111111111
+                2222222222222222222222222222222/22222222
+                33333333333333333333333333333333333333ПП
+                ========================================`;
+
+            // Act
+            let result = getCounter(segment);
+
+            // Assert
+            expect(result).toBe('11111111111111111111111112222222222222222222222222222222/2222222233333333333333333333333333333333333333ПП');
+        });
+
+        it('should return counter if it spans multiple lines with CRLF as new lines', () => {
+            // Arrange
+            let segment =
+                '========================================\r\n' + //
+                'ПФР време:          22.05.2024. 19:31:16\r\n' +
+                'ПФР број рачуна: 00000000-00000000-00000\r\n' +
+                'Бројач рачуна: 1111111111111111111111111\r\n' +
+                '2222222222222222222222222222222/22222222\r\n' +
+                '33333333333333333333333333333333333333ПП\r\n' +
+                '========================================';
+
+            // Act
+            let result = getCounter(segment);
+
+            // Assert
+            expect(result).toBe('11111111111111111111111112222222222222222222222222222222/2222222233333333333333333333333333333333333333ПП');
         });
     });
 });
