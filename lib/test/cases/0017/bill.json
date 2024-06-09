@@ -1,27 +1,29 @@
 {
     "company": {
-      "pib": "111423228",
-      "name": "МАЈКАН 2 доо Београд-Земун",
-      "city": "Београд",
-      "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 199Г",
-      "municipality": "Нови Београд"
+        "pib": "111423228",
+        "name": "МАЈКАН 2 доо Београд-Земун",
+        "city": "Београд",
+        "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 199Г",
+        "municipality": "Нови Београд"
     },
     "pos": {
-      "id": "1100887",
-      "name": "Продавница 1"
+        "id": "1100887",
+        "name": "Продавница 1"
     },
     "items": [
-      {
-        "name": "ZLATNI DELISES",
-        "measurementUnit": "kg",
-        "vatType": 0.1,
-        "price": 81.4,
-        "amount": 0.684,
-        "unitPrice": 119
-      }
+        {
+            "sku": "19",
+            "name": "ZLATNI DELISES",
+            "fullName": "19 ZLATNI DELISES KG /kg",
+            "measurementUnit": "kg",
+            "vatType": 0.1,
+            "price": 81.4,
+            "amount": 0.684,
+            "unitPrice": 119
+        }
     ],
     "price": 81.4,
     "date": "2023-05-13T08:26:45.000Z",
     "number": "GSH7FLQJ-GSH7FLQJ-208973",
     "counter": "208972/208973ПП"
-  }
+}

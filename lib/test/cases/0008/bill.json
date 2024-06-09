@@ -1,27 +1,29 @@
 {
     "company": {
-      "pib": "106481835",
-      "name": "KOMPRODUKT RVU",
-      "city": "Београд",
-      "address": "ОТОНА ЖУПАНЧИЧА 34",
-      "municipality": "Нови Београд"
+        "pib": "106481835",
+        "name": "KOMPRODUKT RVU",
+        "city": "Београд",
+        "address": "ОТОНА ЖУПАНЧИЧА 34",
+        "municipality": "Нови Београд"
     },
     "pos": {
-      "id": "1129503",
-      "name": "МАРКЕТ ВЕНЕРА 29"
+        "id": "1129503",
+        "name": "МАРКЕТ ВЕНЕРА 29"
     },
     "items": [
-      {
-        "name": "VODA PROLOM 1.5 L",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 539.94,
-        "amount": 6,
-        "unitPrice": 89.99
-      }
+        {
+            "sku": null,
+            "name": "VODA PROLOM 1.5 L",
+            "fullName": "VODA PROLOM 1.5 L",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 539.94,
+            "amount": 6,
+            "unitPrice": 89.99
+        }
     ],
     "price": 539.94,
     "date": "2023-05-06T20:33:54.000Z",
     "number": "4GJ7FLHW-4GJ7FLHW-164248",
     "counter": "164228/164248ПП"
-  }
+}

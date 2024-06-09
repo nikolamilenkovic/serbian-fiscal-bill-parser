@@ -26,7 +26,7 @@ KOMPRODUKT RVU
 Артикли
 ========================================
 Назив   Цена         Кол.         Укупно
-VODA PROLOM 1.5 L (Ђ)                   
+112234 VODA PROLOM 1.5 L (Ђ)            
         89,99          6          539,94
 ----------------------------------------
 Укупан износ:                     539,94
@@ -53,37 +53,44 @@ console.log(JSON.stringify(result, null, ' '));
 
 ```JSON
 {
- "company": {
-  "pib": "106481835",
-  "name": "KOMPRODUKT RVU",
-  "city": "Београд",
-  "address": "БАЛКАНСКА 123",
-  "municipality": "Стари Град"
- },
- "pos": {
-  "id": "1234567",
-  "name": "МАРКЕТ НЕРЕВA 33"
- },
- "items": [
-  {
-   "name": "VODA PROLOM 1.5 L",
-   "measurementUnit": "kom",
-   "vatType": 0.2,
-   "price": 539.94,
-   "amount": 6,
-   "unitPrice": 89.99
-  }
- ],
- "price": 539.94
+  "company": {
+    "pib": "106481835",
+    "name": "KOMPRODUKT RVU",
+    "city": "Београд",
+    "address": "БАЛКАНСКА 123",
+    "municipality": "Стари Град"
+  },
+  "pos": {
+    "id": "1234567",
+    "name": "МАРКЕТ НЕРЕВA 33"
+  },
+  "items": [{
+    "sku": "112234",
+    "name": "VODA PROLOM 1.5 L",
+    "fullName": "112234 VODA PROLOM 1.5 L",
+    "measurementUnit": "kom",
+    "vatType": 0.2,
+    "price": 539.94,
+    "amount": 6,
+    "unitPrice": 89.99
+  }],
+  "price": 539.94,
+  "date": "2023-05-06T20:33:54.000Z",
+  "number": "4A17FLHG-4WJ7FLWW-12345",
+  "counter": "123456/123456ПП"
 }
 ```
 
 ## Changelog
 List of changes and improvements.
 
+### 1.0.6
+- Support for extracting SKU (product id) from line items.
+- Support for full name of line items.
+
 ### 1.0.5
-- Support for parsing number (PFR broj računa)
-- Support for parsing counter (Brojač računa)
+- Support for parsing number (PFR broj računa).
+- Support for parsing counter (Brojač računa).
 
 ### 1.0.4
 - Bug fix when parsing item ids.

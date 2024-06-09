@@ -330,8 +330,8 @@ describe(SerbianFiscalBillParser.name, () => {
         });
     });
 
-    describe('getName', () => {
-        const getName = line => parser['getName'](line);
+    describe('getFullItemName', () => {
+        const getFullItemName = line => parser['getFullItemName'](line);
 
         each([
             undefined, //
@@ -340,7 +340,101 @@ describe(SerbianFiscalBillParser.name, () => {
         ]).test('should return null if input is %s', line => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getFullItemName(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        it('should return full name from normalized line', () => {
+            // Arrange
+            let line = 'Samsung K.punj.TipCnaTipC Beli (Ђ) 1.599,00 1 1.599,00';
+
+            // Act
+            let result = getFullItemName(line);
+
+            // Assert
+            expect(result).toBe('Samsung K.punj.TipCnaTipC Beli');
+        });
+    });
+
+    describe('getItemSku', () => {
+        const getItemSku = line => parser['getItemSku'](line);
+
+        each([
+            undefined, //
+            null,
+            ''
+        ]).test('should return null if input is %s', line => {
+            // Arrange
+            // Act
+            let result = getItemSku(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        it('should return null if sku does not exist', () => {
+            // Arrange
+            let line = 'Samsung K.punj.TipCnaTipC Beli';
+
+            // Act
+            let result = getItemSku(line);
+
+            // Assert
+            expect(result).toBeNull();
+        });
+
+        each([
+            ['08462 VITAMIN C CPS A10', '08462'], //
+            ['08462-VITAMIN C CPS A10', '08462'],
+            ['08462 - VITAMIN C CPS A10', '08462'],
+            ['A08462 - VITAMIN C CPS A10', 'A08462'],
+            ['Ђ08462 - VITAMIN C CPS A10', 'Ђ08462'],
+            ['08462,VITAMIN C CPS A10', '08462'],
+            ['08462, VITAMIN C CPS A10', '08462'],
+            ['08435,Baterije (9v)', '08435'],
+            ['08435,Igracke (ostalo)', '08435']
+        ]).test('should return sku from the beginning', (line, target) => {
+            // Arrange
+            // Act
+            let result = getItemSku(line);
+
+            // Assert
+            expect(result).toBe(target);
+        });
+
+        each([
+            ['MAPED SESTAR TEHNIC 308 178001 (Е)/KOM', '178001'], //
+            ['MAPED SESTAR TEHNIC 308,178001 (Е)/KOM', '178001'], //
+            ['MAPED SESTAR TEHNIC 308-178001 (Е)/KOM', '178001'], //
+            ['MAPED SESTAR TEHNIC 308 - 178001 (Е)/KOM', '178001'], //
+            ['MAPED SESTAR TEHNIC 308/178001 (Е)/KOM', '178001'], //
+            ['Dukatos Grčki jogurt/KOM/0246124', '0246124'],
+            ['Dukatos Grčki jogurt/KOM-0246124', '0246124'],
+            ['Dukatos Grčki jogurt/KOM,0246124', '0246124'],
+            ['Dukatos Grčki jogurt/KOM 0246124', '0246124']
+        ]).test('should return sku from the end', (line, target) => {
+            // Arrange
+            // Act
+            let result = getItemSku(line);
+
+            // Assert
+            expect(result).toBe(target);
+        });
+    });
+
+    describe('getItemName', () => {
+        const getItemName = (line, sku) => parser['getItemName'](line, sku);
+
+        each([
+            undefined, //
+            null,
+            ''
+        ]).test('should return null if input is %s', line => {
+            // Arrange
+            // Act
+            let result = getItemName(line, null);
 
             // Assert
             expect(result).toBeNull();
@@ -348,93 +442,93 @@ describe(SerbianFiscalBillParser.name, () => {
 
         it('should return name from normalized line', () => {
             // Arrange
-            let line = 'Samsung K.punj.TipCnaTipC Beli (Ђ) 1.599,00 1 1.599,00';
+            let line = 'Samsung K.punj.TipCnaTipC Beli';
 
             // Act
-            let result = getName(line);
+            let result = getItemName(line, null);
 
             // Assert
             expect(result).toBe('Samsung K.punj.TipCnaTipC Beli');
         });
 
         each([
-            ['08462 VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'], //
-            ['08462-VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['08462 - VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['A08462 - VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['Ђ08462 - VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['08462,VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['08462, VITAMIN C CPS A10 (Ђ) 639,60 1 639,60', 'VITAMIN C CPS A10'],
-            ['08435,Baterije (9v) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
-            ['08435,Igracke (ostalo) (Ђ) 1000,99 1 1000,99', 'Igracke (ostalo)']
-        ]).test('should return name without product id at the beginning', (line, target) => {
+            ['08462 VITAMIN C CPS A10', '08462', 'VITAMIN C CPS A10'], //
+            ['08462-VITAMIN C CPS A10', '08462', 'VITAMIN C CPS A10'],
+            ['08462 - VITAMIN C CPS A10', '08462', 'VITAMIN C CPS A10'],
+            ['A08462 - VITAMIN C CPS A10', 'A08462', 'VITAMIN C CPS A10'],
+            ['Ђ08462 - VITAMIN C CPS A10', 'Ђ08462', 'VITAMIN C CPS A10'],
+            ['08462,VITAMIN C CPS A10', '08462', 'VITAMIN C CPS A10'],
+            ['08462, VITAMIN C CPS A10', '08462', 'VITAMIN C CPS A10'],
+            ['08435,Baterije (9v)', '08435', 'Baterije (9v)'],
+            ['08435,Igracke (ostalo)', '08435', 'Igracke (ostalo)']
+        ]).test('should return name without product id at the beginning', (line, sku, target) => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getItemName(line, sku);
 
             // Assert
             expect(result).toBe(target);
         });
 
         each([
-            ['PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08 [M2 ] (Ђ) 3.866,88 12,960 50.114,76', 'PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08'] //
+            ['PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08 [M2 ]', 'PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08'] //
         ]).test('should return name with complicated product id at the beginning', (line, target) => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getItemName(line, null);
 
             // Assert
             expect(result).toBe(target);
         });
 
         each([
-            ['BMW godiste 15 (КОМ) (Ђ) 1599,00 1 1599,00', 'BMW godiste 15'],
-            ['Knjiga ISBN123456789 (КОМ) (Ђ) 1599,00 1 1599,00', 'Knjiga ISBN123456789'],
-            ['BODI ŽERSEJ - MAJICA - 8683115979663 (КОМ) (Ђ) 599,00 1 599,00', 'BODI ŽERSEJ - MAJICA']
-        ]).test('should return name without product at the end', (line, target) => {
+            ['BMW godiste 15 (КОМ)', null, 'BMW godiste 15'],
+            ['Knjiga ISBN123456789', null, 'Knjiga ISBN123456789'],
+            ['BODI ŽERSEJ - MAJICA - 8683115979663 (КОМ)', '8683115979663', 'BODI ŽERSEJ - MAJICA']
+        ]).test('should return name without product at the end', (line, sku, target) => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getItemName(line, sku);
 
             // Assert
             expect(result).toBe(target);
         });
 
         each([
-            ['Rotkvica, veza/KOM (Е) 39,99 3 119,11', 'Rotkvica, veza'], //
-            ['Rotkvica, veza /KOM (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza(KOM) (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza (kom) (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza{KOM} (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza {kom} (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza[KOM] (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Rotkvica, veza [kom] (Е) 39,99 3 119,11', 'Rotkvica, veza'],
-            ['Mleko/л (Е) 100,00 1 100,00', 'Mleko'],
-            ['Ulje komine masline/л (Ђ) 1000,99 1 1000,99', 'Ulje komine masline'],
-            ['Baterije (9v)(kom) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
-            ['001234-Baterije (9v)(kom) (Ђ) 1000,99 1 1000,99', 'Baterije (9v)'],
-            ['Ceger višenamenski 45x40x20cm sort A.I.&amp;E. kom (Ђ)  319,00  1  319,00', 'Ceger višenamenski 45x40x20cm sort A.I.&amp;E.'],
-            ['Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ) 199,00 1 199,00', 'Izolir traka SPVC crna 20mx19mm Tesa']
-        ]).test('should return name without measurement type', (line, target) => {
+            ['Rotkvica, veza/KOM', null, 'Rotkvica, veza'], //
+            ['Rotkvica, veza /KOM', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza(KOM)', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza (kom)', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza{KOM}', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza {kom}', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza[KOM]', null, 'Rotkvica, veza'],
+            ['Rotkvica, veza [kom]', null, 'Rotkvica, veza'],
+            ['Mleko/л', null, 'Mleko'],
+            ['Ulje komine masline/л', null, 'Ulje komine masline'],
+            ['Baterije (9v)(kom)', null, 'Baterije (9v)'],
+            ['001234-Baterije (9v)(kom)', '001234', 'Baterije (9v)'],
+            ['Ceger višenamenski 45x40x20cm sort A.I.&amp;E. kom', null, 'Ceger višenamenski 45x40x20cm sort A.I.&amp;E.'],
+            ['Izolir traka SPVC crna 20mx19mm Tesa kom', null, 'Izolir traka SPVC crna 20mx19mm Tesa']
+        ]).test('should return name without measurement type', (line, sku, target) => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getItemName(line, sku);
 
             // Assert
             expect(result).toBe(target);
         });
 
         each([
-            ['(30 min)Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '(30 min)Uklanjanje kamenca (odrasli)'], //
-            ['(30 min) Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '(30 min) Uklanjanje kamenca (odrasli)'], //
-            ['{30 min}Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min}Uklanjanje kamenca (odrasli)'],
-            ['{30 min} Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '{30 min} Uklanjanje kamenca (odrasli)'],
-            ['[30 min]Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min]Uklanjanje kamenca (odrasli)'],
-            ['[30 min] Uklanjanje kamenca (odrasli) /КОМ (Г) 3.900,00 1 3.900,00', '[30 min] Uklanjanje kamenca (odrasli)']
+            ['(30 min)Uklanjanje kamenca (odrasli) /КОМ', '(30 min)Uklanjanje kamenca (odrasli)'], //
+            ['(30 min) Uklanjanje kamenca (odrasli) /КОМ', '(30 min) Uklanjanje kamenca (odrasli)'], //
+            ['{30 min}Uklanjanje kamenca (odrasli) /КОМ', '{30 min}Uklanjanje kamenca (odrasli)'],
+            ['{30 min} Uklanjanje kamenca (odrasli) /КОМ', '{30 min} Uklanjanje kamenca (odrasli)'],
+            ['[30 min]Uklanjanje kamenca (odrasli) /КОМ', '[30 min]Uklanjanje kamenca (odrasli)'],
+            ['[30 min] Uklanjanje kamenca (odrasli) /КОМ', '[30 min] Uklanjanje kamenca (odrasli)']
         ]).test('should return name without cutting first bracketed text', (line, target) => {
             // Arrange
             // Act
-            let result = getName(line);
+            let result = getItemName(line, null);
 
             // Assert
             expect(result).toBe(target);

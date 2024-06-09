@@ -1,27 +1,29 @@
 {
-   "company": {
-     "pib": "112840329",
-     "name": "INTERELEKTRONIK SHOP",
-     "city": "Београд",
-     "address": "ЧЕТВРТОГ ЈУЛА 1 ПРИЛАЗ",
-     "municipality": "Гроцка"
-   },
-   "pos": {
-     "id": "1162966",
-     "name": "Инелектроник"
-   },
-   "items": [
-     {
-       "name": "CL3000i-set 35WE Bosch inv",
-       "measurementUnit": "kom",
-       "vatType": 0.2,
-       "price": 59990,
-       "amount": 1,
-       "unitPrice": 59990
-     }
-   ],
-   "price": 59990,
-   "date": "2023-05-11T13:35:57.000Z",
-   "number": "K9EL8LQ6-K9EL8LQ6-9194",
-   "counter": "7954/9194ПП"
- }
+    "company": {
+        "pib": "112840329",
+        "name": "INTERELEKTRONIK SHOP",
+        "city": "Београд",
+        "address": "ЧЕТВРТОГ ЈУЛА 1 ПРИЛАЗ",
+        "municipality": "Гроцка"
+    },
+    "pos": {
+        "id": "1162966",
+        "name": "Инелектроник"
+    },
+    "items": [
+        {
+            "sku": null,
+            "name": "CL3000i-set 35WE Bosch inv",
+            "fullName": "CL3000i-set 35WE Bosch inv Kom",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 59990,
+            "amount": 1,
+            "unitPrice": 59990
+        }
+    ],
+    "price": 59990,
+    "date": "2023-05-11T13:35:57.000Z",
+    "number": "K9EL8LQ6-K9EL8LQ6-9194",
+    "counter": "7954/9194ПП"
+}

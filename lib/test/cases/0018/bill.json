@@ -1,43 +1,49 @@
 {
     "company": {
-      "pib": "106789996",
-      "name": "DOM ZDRAVLJA",
-      "city": "Beograd",
-      "address": "BALKANSKA 1",
-      "municipality": "Stari Grad"
+        "pib": "106789996",
+        "name": "DOM ZDRAVLJA",
+        "city": "Beograd",
+        "address": "BALKANSKA 1",
+        "municipality": "Stari Grad"
     },
     "pos": {
-      "id": "1234567",
-      "name": "DZ"
+        "id": "1234567",
+        "name": "DZ"
     },
     "items": [
-      {
-        "name": "(30 min)Davanje anestezije u terapeutske svrhe",
-        "measurementUnit": "kom",
-        "vatType": 0,
-        "price": 500,
-        "amount": 1,
-        "unitPrice": 500
-      },
-      {
-        "name": "(30 min)Uklanjanje kamenca (odrasli)",
-        "measurementUnit": "kom",
-        "vatType": 0,
-        "price": 3900,
-        "amount": 1,
-        "unitPrice": 3900
-      },
-      {
-        "name": "(30 min)Kompozitni ispun II premolari",
-        "measurementUnit": "kom",
-        "vatType": 0,
-        "price": 3900,
-        "amount": 1,
-        "unitPrice": 3900
-      }
+        {
+            "sku": null,
+            "name": "(30 min)Davanje anestezije u terapeutske svrhe",
+            "fullName": "(30 min)Davanje anestezije u terapeutske svrhe /КОМ",
+            "measurementUnit": "kom",
+            "vatType": 0,
+            "price": 500,
+            "amount": 1,
+            "unitPrice": 500
+        },
+        {
+            "sku": null,
+            "name": "(30 min)Uklanjanje kamenca (odrasli)",
+            "fullName": "(30 min)Uklanjanje kamenca (odrasli) /КОМ",
+            "measurementUnit": "kom",
+            "vatType": 0,
+            "price": 3900,
+            "amount": 1,
+            "unitPrice": 3900
+        },
+        {
+            "sku": null,
+            "name": "(30 min)Kompozitni ispun II premolari",
+            "fullName": "(30 min)Kompozitni ispun II premolari /КОМ",
+            "measurementUnit": "kom",
+            "vatType": 0,
+            "price": 3900,
+            "amount": 1,
+            "unitPrice": 3900
+        }
     ],
     "price": 8300,
     "date": "2024-05-22T19:31:16.000Z",
     "number": "4TJX4LS6-4TJX4LS6-127141",
     "counter": "124721/127141ПП"
-  }
+}

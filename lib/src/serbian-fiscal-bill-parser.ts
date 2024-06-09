@@ -19,8 +19,12 @@ export class SerbianFiscalBillParser {
         let items: Item[] = [];
         let flattenedItems = this.flattenItems(itemsReceiptInitial).split('\n');
         for (const flattenedItem of flattenedItems) {
+            const fullName = this.getFullItemName(flattenedItem);
+            const sku = this.getItemSku(fullName);
             var item = new Item({
-                name: this.getName(flattenedItem),
+                sku: sku,
+                name: this.getItemName(fullName, sku),
+                fullName: fullName,
                 measurementUnit: this.getMeasurementType(flattenedItem),
                 vatType: this.getVatType(flattenedItem),
                 price: this.getItemPrice(flattenedItem),
@@ -169,23 +173,14 @@ export class SerbianFiscalBillParser {
     }
 
     /**
-     * Get item name without id prefix
-     * @param line Flattened line item in the bill
-     * @returns name of the item, without id and measurement unit
+     * Gets the line item SKU (aka product id)
+     * @param line Flattened line item in the bill, without price and vat type
+     * @returns SKU of the item
      */
-    private getName(line: string): string | null {
-        if (!line) {
+    private getItemSku(line: string | null): string | null {
+        if (!line || line.length === 0) {
             return null;
         }
-
-        let start = 0;
-        let end = line.length - 1;
-        let vat = line.match(/\(\D\)/);
-        if (vat && vat.index) {
-            end = vat.index;
-        }
-
-        let result = line.substring(start, end)?.trim();
 
         // If result starts with number (product id), remove it. Id:
         // - can be numeric only 9999
@@ -193,44 +188,69 @@ export class SerbianFiscalBillParser {
         // - can be separated from name with - (and spaces between)
         // - can be separated from name with , (and spaces between)
         // - cannot start with ( or [ or {, for example "(30 min) Massage" is not an item which starts with an id
-        const idPrefixRegex = /^[^0-9({\[]?\d+[ ]*[-,]*/;
-        if (result.match(idPrefixRegex)) {
-            result = result.replace(idPrefixRegex, '');
+        const idPrefixRegex = /^([^0-9({\[]?\d+)[ ]*[-,]*/;
+        const idPrefixMatch = line.match(idPrefixRegex);
+        if (idPrefixMatch) {
+            let idPrefix = idPrefixMatch[1];
+            return idPrefix.trim();
         }
 
-        // If results ends with measurement type, remove it
-        const slashMeasurement = /\/\D{1,3}\d?$/i;
-        if (result.match(slashMeasurement)) {
-            result = result.replace(slashMeasurement, '');
-        }
-        const bracketsMeasurement = /\([ ]?\D{1,3}\d?[ ]?\)$/i;
-        if (result.match(bracketsMeasurement)) {
-            result = result.replace(bracketsMeasurement, '');
-        }
-        const squareBracketsMeasurement = /\[[ ]?\D{1,3}\d?[ ]?\]$/i;
-        if (result.match(squareBracketsMeasurement)) {
-            result = result.replace(squareBracketsMeasurement, '');
-        }
-        const curlyBracketsMeasurement = /\{[ ]?\D{1,3}\d?[ ]?\}$/i;
-        if (result.match(curlyBracketsMeasurement)) {
-            result = result.replace(curlyBracketsMeasurement, '');
-        }
-        const spaceMeasurement = /[ ]+(kom|kg)[ ]*$/i;
-        if (result.match(spaceMeasurement)) {
-            result = result.replace(spaceMeasurement, '');
-        }
+        line = this.removeMeasurementType(line);
 
         // If result ends with number (product id), remove it. Id:
         // - must have at least 4 digits to be considered id
         // - can be numeric only 9999
         // - can start with character A9999
-        // - can be separated from name with - (and spaces between)
-        const idSuffixRegex = /[-]?[ ]*\D?\d{4,}/;
-        const idSuffixMatch = result.match(idSuffixRegex);
+        // - can be separated from name with comma, dash or slash (and spaces between)
+        const idSuffixRegex = /[ ]*[-,/]?[ ]*(\D?\d{4,})[ ]*$/;
+        const idSuffixMatch = line.match(idSuffixRegex);
         if (idSuffixMatch) {
-            if (idSuffixMatch.index && result[idSuffixMatch.index - 1] === ' ') {
-                // Remove only if there is no text before id
-                result = result.replace(idSuffixRegex, '');
+            let idSuffix = idSuffixMatch[1];
+            return idSuffix.trim();
+        }
+
+        // No id found
+        return null;
+    }
+
+    /**
+     * Get item name without id prefix
+     * @param line Flattened line item in the bill
+     * @returns name of the item, without id and measurement unit
+     */
+    private getItemName(line: string | null, sku: string | null): string | null {
+        if (!line) {
+            return null;
+        }
+
+        let result = line;
+        let skuRemoved = false;
+
+        if (sku) {
+            // Remove sku (product id)
+            result = result.replace(sku, '');
+
+            // Remove dash or comma after sku
+            const dashAfterSku = /^[ ]*[-,][ ]*/;
+            if (result.match(dashAfterSku)) {
+                result = result.replace(dashAfterSku, '').trim();
+            }
+
+            // Remove dash, slash or comma before sku
+            const dashBeforeSku = /[ ]*[-\/,]$/;
+            if (result.match(dashBeforeSku)) {
+                result = result.replace(dashBeforeSku, '').trim();
+            }
+            skuRemoved = true;
+        }
+
+        result = this.removeMeasurementType(result);
+
+        if (skuRemoved) {
+            // Remove dash, slash or comma if they left after all the trimmings
+            const dashBeforeSku = /[ ]*[-\/,][ ]*$/;
+            if (result.match(dashBeforeSku)) {
+                result = result.replace(dashBeforeSku, '');
             }
         }
 
@@ -347,6 +367,22 @@ export class SerbianFiscalBillParser {
         return result;
     }
 
+    private getFullItemName(line: string): string | null {
+        if (!line) {
+            return null;
+        }
+
+        const start = 0;
+        let end = line.length - 1;
+        const vat = line.match(/\(\D\)/);
+        if (vat) {
+            end = line.lastIndexOf(vat[0]);
+        }
+
+        const result = line.substring(start, end)?.trim();
+        return result;
+    }
+
     /**
      * Gets item unit price
      * @param line Flattened line item in the bill
@@ -436,11 +472,38 @@ export class SerbianFiscalBillParser {
             return null;
         }
 
-        const counterString = counterStringRaw
-            .split('=')[0]
-            .replace(/ /g, '')
-            .replace(/\r\n/g, '')
-            .replace(/\n/g, '');
+        const counterString = counterStringRaw.split('=')[0].replace(/ /g, '').replace(/\r\n/g, '').replace(/\n/g, '');
         return counterString.trim();
+    }
+
+    /**
+     * Removes measurement type from the line
+     * @param line Line without price and vat type
+     * @returns Line item without measurement type
+     */
+    private removeMeasurementType(line: string): string {
+        // If results ends with measurement type, remove it
+        const slashMeasurement = /\/\D{1,3}\d?$/i;
+        if (line.match(slashMeasurement)) {
+            line = line.replace(slashMeasurement, '');
+        }
+        const bracketsMeasurement = /\([ ]?\D{1,3}\d?[ ]?\)$/i;
+        if (line.match(bracketsMeasurement)) {
+            line = line.replace(bracketsMeasurement, '');
+        }
+        const squareBracketsMeasurement = /\[[ ]?\D{1,3}\d?[ ]?\]$/i;
+        if (line.match(squareBracketsMeasurement)) {
+            line = line.replace(squareBracketsMeasurement, '');
+        }
+        const curlyBracketsMeasurement = /\{[ ]?\D{1,3}\d?[ ]?\}$/i;
+        if (line.match(curlyBracketsMeasurement)) {
+            line = line.replace(curlyBracketsMeasurement, '');
+        }
+        const spaceMeasurement = /[ ]+(kom|kg)[ ]*$/i;
+        if (line.match(spaceMeasurement)) {
+            line = line.replace(spaceMeasurement, '');
+        }
+
+        return line;
     }
 }

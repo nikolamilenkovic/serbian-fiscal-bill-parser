@@ -1,27 +1,29 @@
 {
     "company": {
-      "pib": "106884584",
-      "name": "LIDL SRBIJA",
-      "city": "Београд",
-      "address": "ТОШИН БУНАР 41",
-      "municipality": "Земун"
+        "pib": "106884584",
+        "name": "LIDL SRBIJA",
+        "city": "Београд",
+        "address": "ТОШИН БУНАР 41",
+        "municipality": "Земун"
     },
     "pos": {
-      "id": "1056850",
-      "name": "Prodavnica br. 0124"
+        "id": "1056850",
+        "name": "Prodavnica br. 0124"
     },
     "items": [
-      {
-        "name": "Poga. sa čvarc.",
-        "measurementUnit": "kom",
-        "vatType": 0.1,
-        "price": 119.98,
-        "amount": 2,
-        "unitPrice": 59.99
-      }
+        {
+            "sku": null,
+            "name": "Poga. sa čvarc.",
+            "fullName": "Poga. sa čvarc./KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 119.98,
+            "amount": 2,
+            "unitPrice": 59.99
+        }
     ],
     "price": 119.98,
     "date": "2023-05-06T12:13:28.000Z",
     "number": "6M9HVQHF-6M9HVQHF-68341",
     "counter": "66815/68341ПП"
-  }
+}

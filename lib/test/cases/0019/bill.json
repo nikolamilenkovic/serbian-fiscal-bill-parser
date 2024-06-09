@@ -1,0 +1,279 @@
+{
+    "company": {
+        "pib": "123456789012345",
+        "name": "Prodavnica",
+        "city": "Beograd",
+        "address": "Balkanska 1",
+        "municipality": "Borča"
+    },
+    "pos": {
+        "id": "1234567",
+        "name": "Prodavnica br. 01245"
+    },
+    "items": [
+        {
+            "sku": "0222085",
+            "name": "T.pap.4-slojni10x18",
+            "fullName": "T.pap.4-slojni10x18/KOM/0222085",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 584.99,
+            "amount": 1,
+            "unitPrice": 584.99
+        },
+        {
+            "sku": "0409604",
+            "name": "Odeća",
+            "fullName": "Odeća/KOM/0409604",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 999.99,
+            "amount": 1,
+            "unitPrice": 999.99
+        },
+        {
+            "sku": "7010746",
+            "name": "Chipsy Cut Chili",
+            "fullName": "Chipsy Cut Chili/KOM\t\t\t\t/7010746",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 149.99,
+            "amount": 1,
+            "unitPrice": 149.99
+        },
+        {
+            "sku": "0200672",
+            "name": "Pšenično pivo",
+            "fullName": "Pšenično pivo/KOM/0200672",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 79.99,
+            "amount": 1,
+            "unitPrice": 79.99
+        },
+        {
+            "sku": "0200672",
+            "name": "Pšenično pivo",
+            "fullName": "Pšenično pivo/KOM/0200672",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 79.99,
+            "amount": 1,
+            "unitPrice": 79.99
+        },
+        {
+            "sku": "0246124",
+            "name": "Dukatos Grčki jogurt",
+            "fullName": "Dukatos Grčki jogurt/KOM/0246124",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 149.99,
+            "amount": 1,
+            "unitPrice": 149.99
+        },
+        {
+            "sku": "0207442",
+            "name": "Pasirani paradajz",
+            "fullName": "Pasirani paradajz/KOM/0207442",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 144.99,
+            "amount": 1,
+            "unitPrice": 144.99
+        },
+        {
+            "sku": "0269386",
+            "name": "Sok od nar.100%",
+            "fullName": "Sok od nar.100%/KOM/0269386",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 59.99,
+            "amount": 1,
+            "unitPrice": 59.99
+        },
+        {
+            "sku": "0206094",
+            "name": "Latex rukavice S",
+            "fullName": "Latex rukavice S/KOM/0206094",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 189.99,
+            "amount": 1,
+            "unitPrice": 189.99
+        },
+        {
+            "sku": "0225589",
+            "name": "Dugotrajno mleko 3,2",
+            "fullName": "Dugotrajno mleko 3,2/KOM/0225589",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 114.99,
+            "amount": 1,
+            "unitPrice": 114.99
+        },
+        {
+            "sku": "0083763",
+            "name": "Spanać, 300g",
+            "fullName": "Spanać, 300g/0083763",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 199.99,
+            "amount": 1,
+            "unitPrice": 199.99
+        },
+        {
+            "sku": "0082987",
+            "name": "Bukovaca 300g",
+            "fullName": "Bukovaca 300g/KOM/0082987",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 214.99,
+            "amount": 1,
+            "unitPrice": 214.99
+        },
+        {
+            "sku": "0200889",
+            "name": "Kese za smeće sa ruč",
+            "fullName": "Kese za smeće sa ruč/KOM/0200889",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 299.99,
+            "amount": 1,
+            "unitPrice": 299.99
+        },
+        {
+            "sku": "0083017",
+            "name": "Šampinjoni 400g",
+            "fullName": "Šampinjoni 400g/KOM/0083017",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 179.99,
+            "amount": 1,
+            "unitPrice": 179.99
+        },
+        {
+            "sku": "0225681",
+            "name": "Gauda sir",
+            "fullName": "Gauda sir/KOM/0225681",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 249.99,
+            "amount": 1,
+            "unitPrice": 249.99
+        },
+        {
+            "sku": "0080616",
+            "name": "Avokado, komad",
+            "fullName": "Avokado, komad/KOM/0080616",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 179.99,
+            "amount": 1,
+            "unitPrice": 179.99
+        },
+        {
+            "sku": "0080363",
+            "name": "Trešnja 500g PK",
+            "fullName": "Trešnja 500g PK/KOM/0080363",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 229.99,
+            "amount": 1,
+            "unitPrice": 229.99
+        },
+        {
+            "sku": "0262471",
+            "name": "Dom. ajvar ljuti",
+            "fullName": "Dom. ajvar ljuti/KOM/0262471",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 649.99,
+            "amount": 1,
+            "unitPrice": 649.99
+        },
+        {
+            "sku": "0082236",
+            "name": "Crni luk mladi",
+            "fullName": "Crni luk mladi/KOM/0082236",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 54.99,
+            "amount": 1,
+            "unitPrice": 54.99
+        },
+        {
+            "sku": "0083135",
+            "name": "Krompir b. mlad",
+            "fullName": "Krompir b. mlad/KG/0083135",
+            "measurementUnit": "kg",
+            "vatType": 0.1,
+            "price": 145.33,
+            "amount": 1.118,
+            "unitPrice": 129.99
+        },
+        {
+            "sku": "0238154",
+            "name": "XXL sveže testo za p",
+            "fullName": "XXL sveže testo za p/KOM/0238154",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 249.99,
+            "amount": 1,
+            "unitPrice": 249.99
+        },
+        {
+            "sku": "0265217",
+            "name": "Pileća prsa MK12",
+            "fullName": "Pileća prsa MK12/0265217",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 159.99,
+            "amount": 1,
+            "unitPrice": 159.99
+        },
+        {
+            "sku": "7004386",
+            "name": "Veganski namaz,krast",
+            "fullName": "Veganski namaz,krast/KOM/7004386",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 139.99,
+            "amount": 1,
+            "unitPrice": 139.99
+        },
+        {
+            "sku": "0225515",
+            "name": "Hleb ražani",
+            "fullName": "Hleb ražani/KOM/0225515",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 164.99,
+            "amount": 1,
+            "unitPrice": 164.99
+        },
+        {
+            "sku": "0226148",
+            "name": "Kisela pavlaka",
+            "fullName": "Kisela pavlaka/KOM/0226148",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 247.99,
+            "amount": 1,
+            "unitPrice": 247.99
+        },
+        {
+            "sku": "7126839",
+            "name": "Palmolive gel za tuš.Ma.",
+            "fullName": "Palmolive gel za tuš.Ma./KOM/7126839",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 558.99,
+            "amount": 1,
+            "unitPrice": 558.99
+        }
+    ],
+    "price": 6482.08,
+    "date": "2024-06-09T11:02:04.000Z",
+    "number": "6UF26Y67-6UF26Y67-515662",
+    "counter": "501770/515662ПП"
+}

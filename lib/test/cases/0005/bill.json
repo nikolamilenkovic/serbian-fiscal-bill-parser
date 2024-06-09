@@ -1,35 +1,39 @@
 {
     "company": {
-      "pib": "110976122",
-      "name": "WOLT",
-      "city": "Београд",
-      "address": "БУЛЕВАР ВОЈВОДЕ БОЈОВИЋА 8",
-      "municipality": "Стари Град"
+        "pib": "110976122",
+        "name": "WOLT",
+        "city": "Београд",
+        "address": "БУЛЕВАР ВОЈВОДЕ БОЈОВИЋА 8",
+        "municipality": "Стари Град"
     },
     "pos": {
-      "id": "1207084",
-      "name": "WOLT"
+        "id": "1207084",
+        "name": "WOLT"
     },
     "items": [
-      {
-        "name": "Достава",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 144,
-        "amount": 1,
-        "unitPrice": 144
-      },
-      {
-        "name": "Напојница",
-        "measurementUnit": "kom",
-        "vatType": 0,
-        "price": 50,
-        "amount": 1,
-        "unitPrice": 50
-      }
+        {
+            "sku": null,
+            "name": "Достава",
+            "fullName": "Достава",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 144,
+            "amount": 1,
+            "unitPrice": 144
+        },
+        {
+            "sku": null,
+            "name": "Напојница",
+            "fullName": "Напојница",
+            "measurementUnit": "kom",
+            "vatType": 0,
+            "price": 50,
+            "amount": 1,
+            "unitPrice": 50
+        }
     ],
     "price": 194,
     "date": "2023-05-05T12:46:39.000Z",
     "number": "9VMEKMSN-DBV8GPO0-1337772",
     "counter": "1337527/1337772ПП"
-  }
+}

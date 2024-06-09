@@ -1,27 +1,29 @@
 {
     "company": {
-      "pib": "100295483",
-      "name": "NOKS NJ DOO BEOGRAD",
-      "city": "Београд",
-      "address": "ЦАРА ДУШАНА 236",
-      "municipality": "Земун"
+        "pib": "100295483",
+        "name": "NOKS NJ DOO BEOGRAD",
+        "city": "Београд",
+        "address": "ЦАРА ДУШАНА 236",
+        "municipality": "Земун"
     },
     "pos": {
-      "id": "1141029",
-      "name": "NOKS N.J.  D.O.O."
+        "id": "1141029",
+        "name": "NOKS N.J.  D.O.O."
     },
     "items": [
-      {
-        "name": "PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08",
-        "measurementUnit": "m2",
-        "vatType": 0.2,
-        "price": 50114.76,
-        "amount": 12.96,
-        "unitPrice": 3866.88
-      }
+        {
+            "sku": null,
+            "name": "PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08",
+            "fullName": "PLKNDEC472K - DEC Cementine Mix light beige 200x200 Akl. 1,08 [M2 ]",
+            "measurementUnit": "m2",
+            "vatType": 0.2,
+            "price": 50114.76,
+            "amount": 12.96,
+            "unitPrice": 3866.88
+        }
     ],
     "price": 50114.76,
     "date": "2023-05-08T15:14:11.000Z",
     "number": "FXZU5NQP-FXZU5NQP-11798",
     "counter": "9929/11798ПП"
-  }
+}

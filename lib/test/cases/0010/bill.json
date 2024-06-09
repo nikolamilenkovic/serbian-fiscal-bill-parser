@@ -1,43 +1,49 @@
 {
     "company": {
-      "pib": "108942206",
-      "name": "LC WAIKIKI RETAIL RS",
-      "city": "Београд",
-      "address": "БУЛЕВАР УМЕТНОСТИ 4",
-      "municipality": "Нови Београд"
+        "pib": "108942206",
+        "name": "LC WAIKIKI RETAIL RS",
+        "city": "Београд",
+        "address": "БУЛЕВАР УМЕТНОСТИ 4",
+        "municipality": "Нови Београд"
     },
     "pos": {
-      "id": "1007575",
-      "name": "RS01 Beograd Merkator"
+        "id": "1007575",
+        "name": "RS01 Beograd Merkator"
     },
     "items": [
-      {
-        "name": "BODI ŽERSEJ - MAJICA",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 899,
-        "amount": 1,
-        "unitPrice": 899
-      },
-      {
-        "name": "BODI ŽERSEJ - MAJICA",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 599,
-        "amount": 1,
-        "unitPrice": 599
-      },
-      {
-        "name": "ASESOAR OSTALO",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 7,
-        "amount": 1,
-        "unitPrice": 7
-      }
+        {
+            "sku": "8683117516378",
+            "name": "BODI ŽERSEJ - MAJICA",
+            "fullName": "BODI ŽERSEJ - MAJICA - 8683117516378 (КОМ)",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 899,
+            "amount": 1,
+            "unitPrice": 899
+        },
+        {
+            "sku": "8683115979663",
+            "name": "BODI ŽERSEJ - MAJICA",
+            "fullName": "BODI ŽERSEJ - MAJICA - 8683115979663 (КОМ)",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 599,
+            "amount": 1,
+            "unitPrice": 599
+        },
+        {
+            "sku": "8681364121031",
+            "name": "ASESOAR OSTALO",
+            "fullName": "ASESOAR OSTALO - 8681364121031 (КОМ)",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 7,
+            "amount": 1,
+            "unitPrice": 7
+        }
     ],
     "price": 1505,
     "date": "2023-05-06T19:56:50.000Z",
     "number": "LA6EX622-LA6EX622-41011",
     "counter": "36524/41011ПП"
-  }
+}

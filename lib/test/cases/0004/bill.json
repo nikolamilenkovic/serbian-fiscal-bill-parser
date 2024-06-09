@@ -1,27 +1,29 @@
 {
     "company": {
-      "pib": "111008886",
-      "name": "ЗДРАВСТВЕНА УСТАНОВА АПОТЕКА БОКВИЦА",
-      "city": "Београд",
-      "address": "МИЛУТИНА МИЛАНКОВИЋА 34",
-      "municipality": "Нови Београд"
+        "pib": "111008886",
+        "name": "ЗДРАВСТВЕНА УСТАНОВА АПОТЕКА БОКВИЦА",
+        "city": "Београд",
+        "address": "МИЛУТИНА МИЛАНКОВИЋА 34",
+        "municipality": "Нови Београд"
     },
     "pos": {
-      "id": "1042915",
-      "name": "AU APOTEKA BOKVICA"
+        "id": "1042915",
+        "name": "AU APOTEKA BOKVICA"
     },
     "items": [
-      {
-        "name": "PROBIOTIC FORTE CPS A10",
-        "measurementUnit": "kom",
-        "vatType": 0.2,
-        "price": 639.6,
-        "amount": 1,
-        "unitPrice": 639.6
-      }
+        {
+            "sku": "08462",
+            "name": "PROBIOTIC FORTE CPS A10",
+            "fullName": "08462 PROBIOTIC FORTE CPS A10",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 639.6,
+            "amount": 1,
+            "unitPrice": 639.6
+        }
     ],
     "price": 639.6,
     "date": "2023-02-07T08:34:10.000Z",
     "number": "WR77NJD8-WR77NJD8-8589",
     "counter": "8437/8589ПП"
-  }
+}

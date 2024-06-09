@@ -1,59 +1,69 @@
 {
     "company": {
-      "pib": "101729431",
-      "name": "TRGOCENTAR",
-      "city": "Београд",
-      "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 123",
-      "municipality": "Земун"
+        "pib": "101729431",
+        "name": "TRGOCENTAR",
+        "city": "Београд",
+        "address": "БУЛЕВАР МИХАЈЛА ПУПИНА 123",
+        "municipality": "Земун"
     },
     "pos": {
-      "id": "1063399",
-      "name": "SKROZ DOBRA PEKARA 123 Mihajla Pupina"
+        "id": "1063399",
+        "name": "SKROZ DOBRA PEKARA 123 Mihajla Pupina"
     },
     "items": [
-      {
-        "name": "HLEB RAZANI",
-        "measurementUnit": "kom",
-        "vatType": 0.1,
-        "price": 120,
-        "amount": 1,
-        "unitPrice": 120
-      },
-      {
-        "name": "SARAJEVSKA PITA PECURKA",
-        "measurementUnit": "kom",
-        "vatType": 0.1,
-        "price": 170,
-        "amount": 1,
-        "unitPrice": 170
-      },
-      {
-        "name": "JOGURT 0,25",
-        "measurementUnit": "kom",
-        "vatType": 0.1,
-        "price": 60,
-        "amount": 1,
-        "unitPrice": 60
-      },
-      {
-        "name": "PITA HELJDINA PAPRIKA SPANAC",
-        "measurementUnit": "kom",
-        "vatType": 0.1,
-        "price": 120,
-        "amount": 1,
-        "unitPrice": 120
-      },
-      {
-        "name": "ZU ZU",
-        "measurementUnit": "kg",
-        "vatType": 0.1,
-        "price": 169.06,
-        "amount": 0.214,
-        "unitPrice": 790
-      }
+        {
+            "sku": null,
+            "name": "HLEB RAZANI",
+            "fullName": "HLEB RAZANI",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 120,
+            "amount": 1,
+            "unitPrice": 120
+        },
+        {
+            "sku": null,
+            "name": "SARAJEVSKA PITA PECURKA",
+            "fullName": "SARAJEVSKA PITA PECURKA",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 170,
+            "amount": 1,
+            "unitPrice": 170
+        },
+        {
+            "sku": null,
+            "name": "JOGURT 0,25",
+            "fullName": "JOGURT 0,25",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 60,
+            "amount": 1,
+            "unitPrice": 60
+        },
+        {
+            "sku": null,
+            "name": "PITA HELJDINA PAPRIKA SPANAC",
+            "fullName": "PITA HELJDINA PAPRIKA SPANAC",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 120,
+            "amount": 1,
+            "unitPrice": 120
+        },
+        {
+            "sku": null,
+            "name": "ZU ZU",
+            "fullName": "ZU ZU/kg",
+            "measurementUnit": "kg",
+            "vatType": 0.1,
+            "price": 169.06,
+            "amount": 0.214,
+            "unitPrice": 790
+        }
     ],
     "price": 639.06,
     "date": "2023-05-06T09:36:39.000Z",
     "number": "DVFBZRF5-R7WS5MO0-82915",
     "counter": "82895/82915ПП"
-  }
+}

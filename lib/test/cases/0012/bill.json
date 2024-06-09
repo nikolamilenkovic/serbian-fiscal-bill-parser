@@ -5,199 +5,245 @@
         "city": "Београд",
         "address": "ТОШИН БУНАР 41",
         "municipality": "Земун"
-      },
-      "pos": {
+    },
+    "pos": {
         "id": "1056850",
         "name": "Prodavnica br. 0124"
-      },
-      "items": [
+    },
+    "items": [
         {
-          "name": "Čokokrem roleri",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 189.99,
-          "amount": 1,
-          "unitPrice": 189.99
+            "sku": null,
+            "name": "Čokokrem roleri",
+            "fullName": "Čokokrem roleri/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 189.99,
+            "amount": 1,
+            "unitPrice": 189.99
         },
         {
-          "name": "Roler kikiriki krem",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 189.99,
-          "amount": 1,
-          "unitPrice": 189.99
+            "sku": null,
+            "name": "Roler kikiriki krem",
+            "fullName": "Roler kikiriki krem/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 189.99,
+            "amount": 1,
+            "unitPrice": 189.99
         },
         {
-          "name": "Bela čokolada",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 219.99,
-          "amount": 1,
-          "unitPrice": 219.99
+            "sku": null,
+            "name": "Bela čokolada",
+            "fullName": "Bela čokolada/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 219.99,
+            "amount": 1,
+            "unitPrice": 219.99
         },
         {
-          "name": "Grandino Big Nut/Dou",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 119.99,
-          "amount": 1,
-          "unitPrice": 119.99
+            "sku": null,
+            "name": "Grandino Big Nut/Dou",
+            "fullName": "Grandino Big Nut/Dou/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 119.99,
+            "amount": 1,
+            "unitPrice": 119.99
         },
         {
-          "name": "Sladoled kafa",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 399.99,
-          "amount": 1,
-          "unitPrice": 399.99
+            "sku": null,
+            "name": "Sladoled kafa",
+            "fullName": "Sladoled kafa/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 399.99,
+            "amount": 1,
+            "unitPrice": 399.99
         },
         {
-          "name": "Zel. masl. b. k.",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 269.99,
-          "amount": 1,
-          "unitPrice": 269.99
+            "sku": null,
+            "name": "Zel. masl. b. k.",
+            "fullName": "Zel. masl. b. k./ KG",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 269.99,
+            "amount": 1,
+            "unitPrice": 269.99
         },
         {
-          "name": "Brašno tip 400",
-          "measurementUnit": "kom",
-          "vatType": 0.1,
-          "price": 58.99,
-          "amount": 1,
-          "unitPrice": 58.99
+            "sku": null,
+            "name": "Brašno tip 400",
+            "fullName": "Brašno tip 400/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 58.99,
+            "amount": 1,
+            "unitPrice": 58.99
         },
         {
-          "name": "Toaletni papir, 4-sl",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 599.99,
-          "amount": 1,
-          "unitPrice": 599.99
+            "sku": null,
+            "name": "Toaletni papir, 4-sl",
+            "fullName": "Toaletni papir, 4-sl/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 599.99,
+            "amount": 1,
+            "unitPrice": 599.99
         },
         {
-          "name": "Čokoladni štapići",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 269.99,
-          "amount": 1,
-          "unitPrice": 269.99
+            "sku": null,
+            "name": "Čokoladni štapići",
+            "fullName": "Čokoladni štapići/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 269.99,
+            "amount": 1,
+            "unitPrice": 269.99
         },
         {
-          "name": "Čokoladni štapići",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 269.99,
-          "amount": 1,
-          "unitPrice": 269.99
+            "sku": null,
+            "name": "Čokoladni štapići",
+            "fullName": "Čokoladni štapići/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 269.99,
+            "amount": 1,
+            "unitPrice": 269.99
         },
         {
-          "name": "Čokoladni štapići",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 269.99,
-          "amount": 1,
-          "unitPrice": 269.99
+            "sku": null,
+            "name": "Čokoladni štapići",
+            "fullName": "Čokoladni štapići/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 269.99,
+            "amount": 1,
+            "unitPrice": 269.99
         },
         {
-          "name": "Jaja iz pod. u.",
-          "measurementUnit": "kom",
-          "vatType": 0.1,
-          "price": 349.99,
-          "amount": 1,
-          "unitPrice": 349.99
+            "sku": null,
+            "name": "Jaja iz pod. u.",
+            "fullName": "Jaja iz pod. u./KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 349.99,
+            "amount": 1,
+            "unitPrice": 349.99
         },
         {
-          "name": "Dugotrajno mleko 3,2",
-          "measurementUnit": "kom",
-          "vatType": 0.1,
-          "price": 134.99,
-          "amount": 1,
-          "unitPrice": 134.99
+            "sku": null,
+            "name": "Dugotrajno mleko 3,2",
+            "fullName": "Dugotrajno mleko 3,2/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 134.99,
+            "amount": 1,
+            "unitPrice": 134.99
         },
         {
-          "name": "Kristal šećer",
-          "measurementUnit": "kom",
-          "vatType": 0.1,
-          "price": 114.99,
-          "amount": 1,
-          "unitPrice": 114.99
+            "sku": null,
+            "name": "Kristal šećer",
+            "fullName": "Kristal šećer/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 114.99,
+            "amount": 1,
+            "unitPrice": 114.99
         },
         {
-          "name": "Himalajska so",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 169.99,
-          "amount": 1,
-          "unitPrice": 169.99
+            "sku": null,
+            "name": "Himalajska so",
+            "fullName": "Himalajska so/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 169.99,
+            "amount": 1,
+            "unitPrice": 169.99
         },
         {
-          "name": "Kisela pavlaka",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 249.99,
-          "amount": 1,
-          "unitPrice": 249.99
+            "sku": null,
+            "name": "Kisela pavlaka",
+            "fullName": "Kisela pavlaka/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 249.99,
+            "amount": 1,
+            "unitPrice": 249.99
         },
         {
-          "name": "Krastavac",
-          "measurementUnit": "kg",
-          "vatType": 0.1,
-          "price": 195.99,
-          "amount": 0.98,
-          "unitPrice": 199.99
+            "sku": null,
+            "name": "Krastavac",
+            "fullName": "Krastavac/KG",
+            "measurementUnit": "kg",
+            "vatType": 0.1,
+            "price": 195.99,
+            "amount": 0.98,
+            "unitPrice": 199.99
         },
         {
-          "name": "Tortilja wraps",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 149.99,
-          "amount": 1,
-          "unitPrice": 149.99
+            "sku": null,
+            "name": "Tortilja wraps",
+            "fullName": "Tortilja wraps/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 149.99,
+            "amount": 1,
+            "unitPrice": 149.99
         },
         {
-          "name": "Grandino Choco Chip",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 109.99,
-          "amount": 1,
-          "unitPrice": 109.99
+            "sku": null,
+            "name": "Grandino Choco Chip",
+            "fullName": "Grandino Choco Chip/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 109.99,
+            "amount": 1,
+            "unitPrice": 109.99
         },
         {
-          "name": "Jetrena pašteta",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 65.99,
-          "amount": 1,
-          "unitPrice": 65.99
+            "sku": null,
+            "name": "Jetrena pašteta",
+            "fullName": "Jetrena pašteta/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 65.99,
+            "amount": 1,
+            "unitPrice": 65.99
         },
         {
-          "name": "Pol.dim.sir sa bosi.",
-          "measurementUnit": "kom",
-          "vatType": 0.2,
-          "price": 799.99,
-          "amount": 1,
-          "unitPrice": 799.99
+            "sku": null,
+            "name": "Pol.dim.sir sa bosi.",
+            "fullName": "Pol.dim.sir sa bosi./KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 799.99,
+            "amount": 1,
+            "unitPrice": 799.99
         },
         {
-          "name": "Paradajz grap.",
-          "measurementUnit": "kg",
-          "vatType": 0.1,
-          "price": 163.27,
-          "amount": 0.628,
-          "unitPrice": 259.98
+            "sku": null,
+            "name": "Paradajz grap.",
+            "fullName": "Paradajz grap./KG",
+            "measurementUnit": "kg",
+            "vatType": 0.1,
+            "price": 163.27,
+            "amount": 0.628,
+            "unitPrice": 259.98
         },
         {
-          "name": "Bio Baby spanać, 100",
-          "measurementUnit": "kom",
-          "vatType": 0.1,
-          "price": 179.99,
-          "amount": 1,
-          "unitPrice": 179.99
+            "sku": null,
+            "name": "Bio Baby spanać, 100",
+            "fullName": "Bio Baby spanać, 100/KOM",
+            "measurementUnit": "kom",
+            "vatType": 0.1,
+            "price": 179.99,
+            "amount": 1,
+            "unitPrice": 179.99
         }
-      ],
-      "price": 5544.05,
-      "date": "2023-05-08T18:54:57.000Z",
-      "number": "XGM2WFAA-XGM2WFAA-221126",
-      "counter": "216426/221126ПП"
-    }
+    ],
+    "price": 5544.05,
+    "date": "2023-05-08T18:54:57.000Z",
+    "number": "XGM2WFAA-XGM2WFAA-221126",
+    "counter": "216426/221126ПП"
+}
