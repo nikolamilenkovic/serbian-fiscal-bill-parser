@@ -88,10 +88,12 @@ export class SerbianFiscalBillParser {
             if (bodyLine.match(/^[ ]+/)) {
                 // If line starts with whitespaces, check if it starts with price in format 9.999,99
                 let first = bodyLine.trim().split(' ')[0].replace('.', '').replace(',', '.');
+                let endsWithPrice = bodyLine.trim().match(/[0-9.,]+$/);
                 try {
                     let price = Number.parseFloat(first);
-                    if (!Number.isNaN(price)) {
+                    if (!Number.isNaN(price) && endsWithPrice) {
                         flattenedLine += bodyLine;
+                        flattenedLine = flattenedLine.replace(/[ ]+/g, ' '); // Merge multiple spaces into one
                         lines.push(flattenedLine);
                         flattenedLine = '';
                         continue;
@@ -102,6 +104,9 @@ export class SerbianFiscalBillParser {
             }
 
             flattenedLine += bodyLine;
+            
+            // Merge multiple spaces into one
+            flattenedLine = flattenedLine.replace(/[ ]+/g, ' ');
         }
 
         const result = lines.join('\n');
@@ -146,7 +151,7 @@ export class SerbianFiscalBillParser {
         const lineLowercased = line.toLowerCase();
 
         const measurements = {
-            kom: ['kom', 'ком'], //
+            kom: ['kom', 'ком', 'komad'], //
             kg: ['kg', 'кг'],
             l: ['l', 'л'],
             kut: ['kut', 'кут'],
@@ -499,7 +504,7 @@ export class SerbianFiscalBillParser {
         if (line.match(curlyBracketsMeasurement)) {
             line = line.replace(curlyBracketsMeasurement, '');
         }
-        const spaceMeasurement = /[ ]+(kom|kg)[ ]*$/i;
+        const spaceMeasurement = /[ /]+(kom|kg|komad)[ ]*$/i;
         if (line.match(spaceMeasurement)) {
             line = line.replace(spaceMeasurement, '');
         }

@@ -239,8 +239,8 @@ describe(SerbianFiscalBillParser.name, () => {
 
             // Assert
             expect(lines.length).toBe(2);
-            expect(lines[0]).toBe('Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ)                                           199,00          1          199,00');
-            expect(lines[1]).toBe('Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B kom (Ђ)                             7,00            1            7,00');
+            expect(lines[0]).toBe('Izolir traka SPVC crna 20mx19mm Tesa kom (Ђ) 199,00 1 199,00');
+            expect(lines[1]).toBe('Štampana kesa Okov BG 300 +(2x90)x550x0.051 LDPE B kom (Ђ) 7,00 1 7,00');
         });
     });
 
@@ -267,7 +267,8 @@ describe(SerbianFiscalBillParser.name, () => {
             ['Banane, rinfuz/KG (Е) 199,99 1,084 216,79', 'kg'],
             ['Krastavac komad/PCE (Е) 59,99 1 59,99', 'pce'],
             ['Ulje od kominih maslina/L (Е) 59,99 1 59,99', 'l'],
-            ['Grasak/KUT (Е) 109,99 1 109,99', 'kut']
+            ['Grasak/KUT (Е) 109,99 1 109,99', 'kut'],
+            ['OSN. HALJINA 89575759901 / komad', 'kom'],
         ]).test('should detect measure type with / as separator', (line, measureType) => {
             // Arrange
             // Act
@@ -413,7 +414,8 @@ describe(SerbianFiscalBillParser.name, () => {
             ['Dukatos Grčki jogurt/KOM/0246124', '0246124'],
             ['Dukatos Grčki jogurt/KOM-0246124', '0246124'],
             ['Dukatos Grčki jogurt/KOM,0246124', '0246124'],
-            ['Dukatos Grčki jogurt/KOM 0246124', '0246124']
+            ['Dukatos Grčki jogurt/KOM 0246124', '0246124'],
+            ['OSN. HALJINA 89575759901 / komad', '89575759901'],
         ]).test('should return sku from the end', (line, target) => {
             // Arrange
             // Act

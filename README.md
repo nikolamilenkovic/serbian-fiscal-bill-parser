@@ -84,6 +84,9 @@ console.log(JSON.stringify(result, null, ' '));
 ## Changelog
 List of changes and improvements.
 
+### 1.0.7
+- Better support for a case when name is split across multiple lines (see test case 0020)
+
 ### 1.0.6
 - Support for extracting SKU (product id) from line items.
 - Support for full name of line items.

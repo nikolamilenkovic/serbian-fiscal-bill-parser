@@ -1,0 +1,59 @@
+{
+    "company": {
+        "pib": "1234567890",
+        "name": "FIRMA DOO BEOGRAD",
+        "city": "Београд",
+        "address": "BALKANSKA 123/ABC",
+        "municipality": "Нови Београд"
+    },
+    "pos": {
+        "id": "1234567",
+        "name": "OBJEKAT U ULICI BALKANSKOJ 123/ABC"
+    },
+    "items": [
+        {
+            "sku": "02675379203",
+            "name": "MAJICA DEZEN",
+            "fullName": "MAJICA DEZEN 02675379203 / komad",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 999,
+            "amount": 1,
+            "unitPrice": 999
+        },
+        {
+            "sku": "44070119903",
+            "name": "P.C. KOSULJE",
+            "fullName": "P.C. KOSULJE 44070119903 / komad",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 1999,
+            "amount": 1,
+            "unitPrice": 1999
+        },
+        {
+            "sku": "02675439903",
+            "name": "MAJICA DEZEN",
+            "fullName": "MAJICA DEZEN 02675439903 / komad",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 899,
+            "amount": 1,
+            "unitPrice": 899
+        },
+        {
+            "sku": "89575759901",
+            "name": "OSN. HALJINA",
+            "fullName": "OSN. HALJINA 89575759901 / komad",
+            "measurementUnit": "kom",
+            "vatType": 0.2,
+            "price": 2799,
+            "amount": 1,
+            "unitPrice": 2799
+        }
+    ],
+    "price": 6696,
+    "date": "2024-06-28T18:52:48.000Z",
+    "number": "ABCDEFGH-IJ123456-78901",
+    "counter": "12345/67890ПП"
+}
